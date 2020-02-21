@@ -1,8 +1,9 @@
 // Finds modul in node_modules
-var express = require("express")
+const express = require("express")
+const request = require("request");
 
 // Calling express as a function
-var app = express()
+let app = express()
 
 // app.get("/") = route we want to look at /get
 // (req, res) is what we are requesting from the api or responding to 
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
     }
     res.send(response)
 })
-
+/*
 app.get("/aboutMe", (req, res) => {
     const response = {
         firstname: "mads",
@@ -30,7 +31,7 @@ app.get("/aboutMe", (req, res) => {
     res.send(response)
 
 })
-
+*/
 
 const dayOfTheWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
 
@@ -51,6 +52,46 @@ app.get("/time", (req, res) => {
     //like a return statement
     res.send(response)
 })
+
+
+// create a get route on /users
+// :id and :message is our path variables
+app.get("/users/:id", (req, res) => {
+    console.log(req.params)
+    
+    let param = req.params.id
+
+    let users = [{name: "mads", id: 1}, {name: "kasper", id: 2}]
+    
+    //find out to compare id with request 
+    const response = (param === users.find(users.id))
+
+    return res.send(response)
+
+})
+
+// how to do a query string 
+app.get("/search", (req, res) => {
+    console.log(req.query)
+    return res.send(req.query)
+})
+
+
+app.get("/google", (req, res) => {
+    const request = require('request')
+    request('http://www.google.com', function (error, response, body) {
+      console.error('error:', error) // Print the error if one occurred
+      console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+      console.log('body:', body) // Print the HTML for the Google homepage.
+      return res.send(body)
+    })
+})
+
+app.get("/documentation", (req, res) => {
+    console.log(__dirname)
+    return res.sendFile(__dirname + "/public/documentation.html")
+})
+
 
 
 // The port the app is listing for. 

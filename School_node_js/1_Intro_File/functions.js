@@ -46,7 +46,7 @@ findPerson(intro)
 findPerson(goodbye)
 */
 
-/*
+
 const meObject = {"hobby": "tennis"}
 
 // uses dot notation on objects ex. object.value
@@ -55,7 +55,7 @@ const aboutMe = function(me){
 }
 
 aboutMe(meObject);
-*/
+
 
 // Create an arrow function that is called callingLater
 // that takes the function calling as an argument
