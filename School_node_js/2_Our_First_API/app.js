@@ -59,15 +59,15 @@ app.get("/time", (req, res) => {
 app.get("/users/:id", (req, res) => {
     console.log(req.params)
     
-    let param = req.params.id
+    let paramid = parseInt(req.params.id)
 
     let users = [{name: "mads", id: 1}, {name: "kasper", id: 2}]
     
     //find out to compare id with request 
-    const response = (param === users.find(users.id))
-
-    return res.send(response)
-
+    const response = users.find(({id}) => id === paramid) 
+        return res.send(response)
+    
+    
 })
 
 // how to do a query string 
@@ -88,9 +88,15 @@ app.get("/google", (req, res) => {
 })
 
 app.get("/documentation", (req, res) => {
-    console.log(__dirname)
+    //console.log(__dirname)
     return res.sendFile(__dirname + "/public/documentation.html")
 })
+
+
+app.get("/documentationtwo", (req, res) =>{
+    return res.sendFile(__dirname + "/public/documentationtwo.html")
+})
+
 
 
 
