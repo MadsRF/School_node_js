@@ -65,7 +65,8 @@ app.get("/users/:id", (req, res) => {
     
     //find out to compare id with request 
     const response = users.find(({id}) => id === paramid) 
-        return res.send(response)
+    
+    return res.send(response)
     
     
 })
@@ -75,6 +76,21 @@ app.get("/search", (req, res) => {
     console.log(req.query)
     return res.send(req.query)
 })
+
+
+
+app.get("/searchs", (req, res) => {
+    const password = "1234"
+    let queryInput = Object.values(req.query)
+    console.log(queryInput)
+    
+    if (password == queryInput){
+        return res.send(req.query)
+    }else{
+        return res.send("Not the right password")
+    }    
+})
+
 
 
 app.get("/google", (req, res) => {
@@ -102,7 +118,7 @@ app.get("/documentationtwo", (req, res) =>{
 
 // The port the app is listing for. 
 // use ports above 1023 because they are reserved for other applications.  
-app.listen(3000, error => {
+app.listen(3000, (error) => {
     if (error) {
         console.log("Error running the server", error)
     }
