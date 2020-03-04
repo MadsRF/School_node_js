@@ -1,4 +1,33 @@
-body{
-    background-color: blueviolet;
+body, .main_button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
 
+body{
+    background-color: whitesmoke;
+}
+.center_box{
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 2%;
+    border-bottom: 0.1em solid lightgray;
+    background-color: white;
+    text-align: center;
+}
+.main_button{
+    padding: 0.5em;
+    width: 10em;
+    margin: 1%;
+    margin-bottom: 1%;
+}
+.made_by_footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-style: italic;
 }
