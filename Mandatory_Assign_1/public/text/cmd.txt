@@ -1,0 +1,15 @@
+We're have used the terminal to execute our program and install diffrent dependencies for our node server. There are alot of diffrent terminals to use like shown below powershell (left) and bash (right). 
+The way to execute our program for example our app.js which runs our node.js server is pretty much the same for all the terminals.
+But there are some key diffrents in how we navigate and do certain operations. For example the way to see whats in our directive 
+is a good example for powershell and Bash you can use the "dir" (directory) or "ls" but in windows command prompt you can only use 
+the dir. 
+
+<br><br>
+
+We also use keywords/commands like npm or npx:
+
+<br><br>
+
+NPM - npm (node package manager) is the dependency/package manager you get out of the box when you install Node.js. 
+It provides a way for developers to install packages both globally and locally. <br>
+NPX - A tool for executing Node packages and not installing anything. 
