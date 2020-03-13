@@ -1,0 +1,18 @@
+{
+    "person": {
+        "firstname": "mads",
+        "lastname": "frederiksen",
+        "adress": "scandigade",
+        "number": "123456789",
+        "age2": 28,
+        "cpr": 2205910000,
+        "city": "copenhagen",
+
+        "medical":{
+            "bloodtype": "b-positive",
+            "gender": "male",
+            "height": "181cm"
+        }
+
+    }
+}

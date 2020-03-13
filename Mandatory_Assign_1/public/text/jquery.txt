@@ -1,0 +1,32 @@
+jQuery is a lightweight, "write less, do more", JavaScript library.
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, 
+and wraps them into methods that you can call with a single line of code.
+
+<br><br>
+
+The image below shows a HTML file with our jQuery source link. This is one of two ways to access/use Jquery. The other way is to download the jQuery library locally and reference that.
+
+
+<br><br>
+<img src="/images/jquery1.jpg" alt="1"><br><br>
+
+A way for us the test if the jQuery works is to  do the following console.log as below where we access jQuery with the dollarsign $ and do a simple 2+2
+Then in our webbrowser on the affected page you can right-click on the page and then go to "inspect" where you'll find the Console menu. where it should 
+display the same as the secound picture below.
+<br><br>
+<img src="/images/jquery4.jpg" alt="1"><br><br>
+<img src="/images/jquery5.jpg" alt="1"><br><br>
+
+This picture below is some simple jQuery excersices we did in class that shows different methods you can use with jQuery.
+Basic syntax is: $(selector).action() <br><br>
+
+A $ sign to define/access jQuery <br>
+A (selector) to "query (or find)" HTML elements <br>
+A jQuery action() to be performed on the element(s)
+<br><br>
+<img src="/images/jquery2.jpg" alt="1"><br><br>
+
+This is some jQuery code used for this specific assignment. 
+<br><br>
+<img src="/images/jquery3.jpg" alt="1"><br><br>

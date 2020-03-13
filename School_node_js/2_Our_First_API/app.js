@@ -17,8 +17,9 @@ app.get("/", (req, res) => {
     }
     res.send(response)
 })
-/*
+
 app.get("/aboutMe", (req, res) => {
+    
     const response = {
         firstname: "mads",
         lastname: "frederiksen",
@@ -27,11 +28,12 @@ app.get("/aboutMe", (req, res) => {
         age: 28,
         cpr: 220591-0000,
         city: "copenhagen"
-    }
-    res.send(response)
+    };
 
-})
-*/
+    return res.send(response);
+
+});
+
 
 const dayOfTheWeek = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
 

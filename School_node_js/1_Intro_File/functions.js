@@ -1,5 +1,3 @@
-/*
-
 // "hoisting" means you can call your function before defining it in the code since code doesn't matter
 console.log(addition(2,6))
 
@@ -26,8 +24,6 @@ console.log(test2)
     console.log("1,2,3")
 }
 
-*/
-/*
 function intro() {
     console.log("nice to meet you")
 }
@@ -42,10 +38,7 @@ function findPerson(whatToDoAfterFindingAPerson) {
 }
 
 findPerson(intro)
-
 findPerson(goodbye)
-*/
-
 
 const meObject = {"hobby": "tennis"}
 

@@ -1,26 +1,28 @@
 body, .main_button{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
+    
 }
-
 body{
     background-color: whitesmoke;
+    margin: 0;
 }
+/* THIS IS THE MENU BOX */
 .center_box{
-    left: 0;
-    top: 0;
+    padding-bottom: 1%;
     width: 100%;
-    padding-bottom: 2%;
     border-bottom: 0.1em solid lightgray;
     background-color: white;
     text-align: center;
 }
+/* THIS IS THE MENU BOX BUTTONS */
 .main_button{
     padding: 0.5em;
     width: 10em;
     margin: 1%;
-    margin-bottom: 1%;
+    font-weight: bold;
 }
+/* THIS IS THE FOOTER (BOTTOM) */
 .made_by_footer{
     position: fixed;
     left: 0;
@@ -30,4 +32,5 @@ body{
     color: black;
     text-align: center;
     font-style: italic;
+    border-top: 0.1em solid lightgray;
 }

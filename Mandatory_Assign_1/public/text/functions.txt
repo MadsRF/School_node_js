@@ -1,1 +1,15 @@
-testtesttest
+A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+A list of parameters to the function, enclosed in parentheses and separated by commas.
+The JavaScript statements that define the function, enclosed in curly brackets, {...}.
+For example, the following JavaScript code defines some simple functions:
+
+<br><br>
+<img src="/images/function1.jpg" alt="1"><br><br>
+An arrow function expression has a shorter syntax compared to function expressions and does not have its own this, arguments, super, or new.target.
+Two factors influenced the introduction of arrow functions: shorter functions and non-binding of this. See jQuery example below
+<br><br>
+<img src="/images/function2.jpg" alt="4"><br><br>
+
+<br><br>
+

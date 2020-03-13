@@ -1,0 +1,29 @@
+JavaScript is the Programming Language for the Web. JavaScript can update and change both HTML and CSS. 
+But for that we're primarly using jQuery which is a javaScript library 
+In javaScript you find the same datatypes as we have worked with in Java. 
+But we declare them diffrently like shown below from our exercises. 
+Instead of using our datatypes like String, int, double or boolean to declare the type we use the value instead. 
+this makes for a more dynamic use of our variables and easier to spot the type. 
+we use the keywords "var", "let", "const". "var" is used for a global varible whereas the "let" is used 
+for more local use like in a function or such. 
+the "const" keyword is used for a variable that dosen't change type/value and staying what it was originally. 
+
+<br><br>
+
+This first image is of 2 String values. This is seen by the quotation marks "String" which incapsulates our values 
+<br><br>
+<img src="/images/type1.jpg" alt="String"><br><br>
+
+This one displays an object. Which is displayed with curly brackets {Object}
+<br><br>
+<img src="/images/type2.jpg" alt="object"><br><br>
+This one is an Array which is displayed with square bracktes [Array]
+<br><br>
+<img src="/images/type3.jpg" alt="array"><br><br>
+This one displays and String (year) and int (number) value. the int value must be a number 0-9 and without quotation marks. 
+<br><br>
+<img src="/images/type4.jpg" alt="string and int"><br><br>
+This last one is an Array which holds multiple Objects with each multiple values. 
+<br><br>
+<img src="/images/type5.jpg" alt="object with an array"><br><br>
+  

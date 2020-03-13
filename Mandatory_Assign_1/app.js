@@ -23,10 +23,6 @@ app.get(("/cmd_page"), (req, res) => {
     console.log("cmd_page");
     return res.sendFile(__dirname + "/public/pages/cmd_page.html");
 });
-app.get(("/datatypes_page"), (req, res) => {
-    console.log("datatypes_page");
-    return res.sendFile(__dirname + "/public/pages/datatypes_page.html");
-});
 app.get(("/functions_page"), (req, res) => {
     console.log("functions_page");
     return res.sendFile(__dirname + "/public/pages/functions_page.html");

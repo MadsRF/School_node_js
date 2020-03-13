@@ -1,0 +1,32 @@
+<ul>
+    <li> JSON is a specification for javaScript object notation. <br><br>
+    <li> JSON is a syntax for storing and exchanging data. <br><br>
+    <li> JSON files are created with file.json. I't must contain curly brackets {...} to be valid and must use quotation marks " " for keys that you do not use in JavaScript.
+</ul>
+
+When exchanging data between a browser and a server, the data can only be text.
+JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.
+We can also convert any JSON received from the server into JavaScript objects.
+This way we can work with the data as JavaScript objects, with no complicated parsing and translations.
+If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:
+<br><br>
+
+Contains keys (ex. "firstname") and values (ex. "mads") like the example below:
+<br><br>
+<img src="/images/JSON1.jpg" alt="1"><br><br>
+
+This is our package.json which is a JSON file and contains all the information about our project and dependencies. 
+<br><br>
+<img src="/images/JSON2.jpg" alt="1"><br><br>
+
+The JSON file must also not contain duplicates:
+<br><br>
+<img src="/images/JSON3.jpg" alt="1"><br><br>
+
+
+
+A JSON file can also have nested keys (medical) like the example below.
+
+<br><br>
+<img src="/images/JSON4.jpg" alt="1"><br><br>
+
