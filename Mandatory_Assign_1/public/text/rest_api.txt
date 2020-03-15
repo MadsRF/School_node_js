@@ -1,0 +1,44 @@
+A RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.
+
+This example below shows us how we do that with either our collection or one item/object 
+
+<br><br>
+<img src="/images/rest1.1.jpg" alt="1"><br><br>
+<img src="/images/rest1.2.jpg" alt="1"><br><br>
+
+We have done this in class with our car object. The first 2 functions is get all cars (the collection) and the other is the on specific car (item)
+<br><br>
+<img src="/images/rest2.jpg" alt="1"><br><br>
+
+If we then start up our server and go to the GET item we see the following.
+This is done by our path variabel which is 1 and points to our id.   
+
+<br><br>
+<img src="/images/rest3.jpg" alt="1"><br><br>
+
+The same is done here but instead we don't point at a specific id but the whole collection of cars
+<br><br>
+<img src="/images/rest4.jpg" alt="1"><br><br>
+
+This code snippet below shows our Create, Update and Delete function in our REST api. for our cars.
+<br><br>
+<img src="/images/rest5.jpg" alt="1"><br><br>
+
+To manipulate/add to the server we use postman which allows us to do so.
+In this image we use our create function and add a new object with key "price"
+and value "it works" to our collection. We do this by sending a http post request because we want to add information to our list.
+<br><br>
+<img src="/images/post2.jpg" alt="1"><br><br>
+If we look at our collection again we see that it have been added.
+<br><br>
+<img src="/images/post3.jpg" alt="1"><br><br>
+After that we use our delete function t oremove it from our collection again. We do this by 
+pointing at the path variable which in this case would be 3.
+<br><br>
+<img src="/images/post4.jpg" alt="1"><br><br>
+Lastly we Update our collection by and using our path variabel and adding the keys and values we want to add in a json format
+and as seen below we can see that our mercedes is now a jeep with a type of suv. But the id is still the same 
+and thats because we don't allow our user to change that in our code by removing that option.
+<br><br>
+<img src="/images/post5.jpg" alt="1"><br><br>
+<br><br>

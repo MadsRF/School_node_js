@@ -46,7 +46,6 @@ app.put("/cars/:id", (req, res) => {
     return res.send({ responds: cars });
 });
     
-
 // delete 1 car by id 
 app.delete('/cars/:id', (req, res) => {
     cars = cars.filter(car => car.id !== parseInt(req.params.id));

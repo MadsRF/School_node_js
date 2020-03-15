@@ -58,6 +58,17 @@ $(document).ready( () =>{
     $(".body_context").css("text-align","center");
     $(".body_context_text").css("text-align", "left");
     $(".body_context_text").css("margin", "2% 15% 2% 15%"); // top, right, bottom, left    
+
+    // hover function for the main menu buttons 
+    $(".main_button").hover(function(){
+        // on button
+        $(this).css("background-color", "grey");
+        }, 
+        // off button
+        function(){
+        $(this).css("background-color", "#fbfbfb");
+      });
+
 });
 
 // load text for the pages (gotten from Stack overflow. https://stackoverflow.com/questions/6470567/jquery-load-txt-file-and-insert-into-div/6470598)
@@ -67,5 +78,7 @@ $(document).ready( () => {
     $("#text_body_functions").load("text/functions.txt");
     $("#text_body_jquery").load("text/jquery.txt");
     $("#text_body_json").load("text/json.txt");
+    $("#text_body_node").load("text/node.txt");
+    $("#text_body_rest_api").load("text/rest_api.txt");
 }); 
 

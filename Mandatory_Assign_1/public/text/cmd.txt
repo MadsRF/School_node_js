@@ -15,13 +15,16 @@ We also use keywords/commands like npm or npx:
 
 <br><br>
 
-NPM - npm (node package manager) is the dependency/package manager you get out of the box when you install Node.js. 
-It provides a way for developers to install packages both globally and locally. <br>
-NPX - A tool for executing Node packages and not installing anything. 
-
+<ul>
+<li>NPM - npm (node package manager) is the dependency/package manager you get out of the box when you install Node.js. 
+It provides a way for developers to install packages both globally and locally. <br><br>
+<li>NPX - A tool for executing Node packages and not installing anything. 
+</ul>
 <br><br> 
 
-packages we have worked with is express which is a lightweight framework for our server. We have also used something called budo
+Packages we have worked with is express which is a lightweight framework for our server. We have also used something called 
+budo which is a dependency focused on "live server" which means it updates the server in real time while we work on it. 
+ 
 
 <br><br> 
 

@@ -1,0 +1,43 @@
+<ul>
+    <li>Is an open source server environment
+    <li>Uses JavaScript on the server
+    <li>Uses asynchronous programming! which mean is Node.js eliminates the waiting, and simply continues with the next request.
+    <li>Node.js files must be initiated on the server before having any effect
+    <li>Node.js runs single-threaded, non-blocking, asynchronously programming, which is very memory efficient.
+</ul>
+<br><br>
+
+
+We have been using Node.js to set up our backend server to run our application or app.js
+The first thing you need to do is of course download Node for your setup. But node in it self is not enough.
+So we will also need to download some dependencies. The dependency we have been using for the server is express 
+
+There is alot of way to do this but one of the ways is as shown below where we use "npm install express"  
+
+<br><br>
+<img src="/images/node5.jpg" alt="1"><br><br>
+
+This automatically generate our package.js which contains our dependencies for the project, 
+and package-lock-json which holds the information about our project.
+
+<br><br>
+<img src="/images/node1.jpg" alt="1"><br><br>
+
+If we go into our package.js we can see that it add our express dependency. it is also possible to add this 
+manually and then run your package.js with the "npm install" command. 
+
+<br><br>
+<img src="/images/node2.jpg" alt="1"><br><br>
+
+Here we have our package-lock.json and we can see everything about our express dependency, 
+like version, source, and it's own dependencies.
+
+<br><br>
+<img src="/images/node3.jpg" alt="1"><br><br>
+
+Lastly we have a simple setup for a server where we use express and create a simple
+app.get with a res "respond" to anyone going to that port (localhost:4000)
+
+<br><br>
+<img src="/images/node4.jpg" alt="1"><br><br>
+
