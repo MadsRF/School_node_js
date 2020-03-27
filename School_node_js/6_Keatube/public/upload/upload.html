@@ -1,0 +1,17 @@
+<script src="/upload/upload.js"></script>
+
+<h3>upload</h3>
+
+<form action="/Videos" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+    <input placeholder="title" name="title" />
+    <textarea placeholder="description" name="description" id="" cols="30" rows="10"></textarea> 
+    <input type="file" name="uploadedVideo" accept="video/*" onchange="handleFileUpload(this.files)" />
+    <button type="submit">submit</button>
+</form>
+
+<!-- this is a standard form without multer 
+<form action="/test" method="POST">
+    <input type="text" name="user">
+    <button type="submit">submit</button>
+</form>
+-->
