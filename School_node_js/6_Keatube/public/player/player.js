@@ -17,6 +17,9 @@ $.get(`/videos/${videoId}`)
         $("#player").append(player);
 
         $("#description").text(data.response.description);
+        
+        $("#category").text(data.response.category);
+        $("#tags").text(data.response.tags);
     })
     .catch((error) => {
         console.log(error);

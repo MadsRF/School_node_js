@@ -1,6 +1,6 @@
 // router 
-const router = require("express").Router();
 // const uuid4 = require("uuid").v4;
+const router = require("express").Router();
 
 // module in node 
 const crypto = require("crypto");
@@ -10,31 +10,21 @@ const multer = require("multer");
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "videos/");
-        //console.log(file);
     },
-    
     // req contains the form data, file contains the file and cb is "callback" function
-    filename: (req, file, cb) =>{        
-        //anders way to get extension
+    filename: (req, file, cb) => {
         const mimetypeArray = file.mimetype.split("/");
-        const fileName = crypto.randomBytes(16).toString("hex");
-        const extension = mimetypeArray[mimetypeArray.lenght -1]; 
-        //const extension = file.originalname.substring(file.originalname.lastIndexOf('.'), file.originalname.length);
-        
+
         // checks for the correct videoformats 
-        if (mimetypeArray[0] === "video") {
-
+        if (mimetypeArray[0] === "video") { 
+            const extension = mimetypeArray[mimetypeArray.length - 1];
+            const fileName = crypto.randomBytes(18).toString("hex");
             
-            cb(null, fileName + "." + extension); 
-            //cb(null, `${fileName}${extension}`); 
-            
-            console.log("OK " + fileName+extension);
+            cb(null, fileName + "." + extension);
         } else {
-            console.log("ERROR this is not a video");
+            cb("Error: The file is not a video");
         }
-        
     }
-
 });
 
 const upload = multer({ storage: storage });
@@ -46,7 +36,7 @@ const upload = multer({ storage: storage });
 
 // what data do we want in our videos array? {}, ok but what keys and values.
 const videos = [{
-    id: "1", 
+    id: "", 
     title: "NightSky", 
     description: "this is good", 
     category: "nature", 
@@ -54,14 +44,11 @@ const videos = [{
     thumbnail: "",
     uploadDate: "20/3-2020", 
     tags: ["stars", "sky"]
-},
 
-{  }
+}];
 
-];
 
 const videosPerPage = 12;
-
 
 router.get("/videos", (req, res) => {
     // makes sure we get the correct value and if not goes to page 1 
@@ -75,20 +62,49 @@ router.get("/videos", (req, res) => {
 });
 
 router.get("/videos/:videoId", (req, res) => {
-    // videos ... get 1 video with that unique videoId
-    // get the videoId: req.params.videoId
     return res.send({ response: videos.find(video => video.fileName === req.params.videoId) });
 });
 
 router.post("/videos", upload.single("uploadedVideo"), (req, res) => {
+    //console.log(req.body);
+    //console.log(req.file);
+
+
+    const video = {
+        title: req.body.title.trim(),
+        thumbnail: "",
+        description: req.body.description,
+        fileName: req.file.filename,
+        uploadDate: new Date(),
+        category: req.body.category,
+        tags: req.body.tags.split(/\s*[,\s]\s*/)
+        //tags: [ req.body.tags ]
+    };
+
+    /* Validation */
+    const titleMaxLength = 128;
+
+    if (video.title.length === 0 || video.title.length > titleMaxLength) {
+        return res.status(400).send({ response: `Title cannot be empty or above ${titleMaxLength} chars.`});
+    }
+    
+    const descriptionMaxLength = 2048;
+
+    if (video.description.lenght > descriptionMaxLength) {
+        return res.status(400).send({ response: `Description cannot be empty or above ${descriptionMaxLength} chars.`});
+    }
+
+    const fileSizeLimit = 262144000;
+
+
+    if (req.file.size > fileSizeLimit) {
+        return res.status(400).send({ response: `The video is bigger than ${fileSizeLimit} bytes.`});
+    }
+
+    /* pushes to our videos array */
+    videos.push(video);
+
     return res.redirect("/");
-
-});
-
-router.post("/test", (req, res) => {
-    console.log(req.body.user);
-    return res.redirect("/");
-
 });
 
 module.exports = router;
