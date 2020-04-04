@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 
-// makes public folder static   
+// Makes public folder static, so it's always is accessable    
 app.use(express.static("public"));
 
 // Firebase Connection
