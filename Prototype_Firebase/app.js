@@ -21,19 +21,26 @@ let docRef = db.collection('coffee').doc();
 //let setCoffee = docRef.set({ title: "test fra node" });
 
 // http get request
+app.get("/title", (req, res) => {
+  // For loop goes thorugh our collection list and displays them in log. 
+  db.collection('coffee').get().then((snapshot) => {
+    snapshot.forEach((doc) => {
+      let test = doc.data()
+      return res.send(test); 
+      //console.log(doc.id, '=>', doc.data().title);
+    });
+  })
+  // Error handling for not being able to get data
+  .catch((err) => {
+    console.log('Error getting documents', err);
+  });
+   
+});
+
+
+// http get request
 app.get("/", (req, res) => {
     console.log("frontpage");
-
-    // For loop goes thorugh our collection list and displays them in log. 
-    db.collection('coffee').get().then((snapshot) => {
-        snapshot.forEach((doc) => {
-          console.log(doc.id, '=>', doc.data().title);
-        });
-      })
-      // Error handling for not being able to get data
-      .catch((err) => {
-        console.log('Error getting documents', err);
-      });
 
     // Returns frontpage.html when accessing localhost:9000/
     return res.sendFile(__dirname + "/public/frontpage.html");
