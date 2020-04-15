@@ -18,7 +18,7 @@ let db = admin.firestore();
 let docRef = db.collection('coffee').doc();
 
 // sends data to the firebase database  
-//let setCoffee = docRef.set({ title: "test fra node" });
+let setCoffee = docRef.set({ title: "test fra gammel node" });
 
 // http get request
 app.get("/title", (req, res) => {
@@ -36,7 +36,6 @@ app.get("/title", (req, res) => {
   });
    
 });
-
 
 // http get request
 app.get("/", (req, res) => {

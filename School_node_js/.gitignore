@@ -1,5 +1,5 @@
 # ignores all videos in video folder 
-**/videos/*
+
 
 # Logs
 logs
