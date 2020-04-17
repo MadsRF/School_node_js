@@ -1,0 +1,19 @@
+Relational databases
+--------------------
+MySQL
+MariaDB
+Oracle
+Postgres
+CouchDB
+mssql
+
+
+NoSql
+-----
+MongoDB - Document Database
+FireBase
+AWS RDS
+DynamoDB
+CassandraDB
+Neo4J
+Realm
