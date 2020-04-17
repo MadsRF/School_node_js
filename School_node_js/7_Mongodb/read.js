@@ -26,8 +26,8 @@ mongoClient.connect(connectionUrl, { useUnifiedTopology: true}, (error, client) 
         client.close();
     });
 */
-     // find all Tigers from array
-     cats.find({"species": "Tiger"}).toArray((error, foundCats) =>{
+     // find all Tigers from array. uses projection to not include the id. 0 = false 
+     cats.find({species: "Tiger"}, {projection: {_id: 0}}).toArray((error, foundCats) =>{
         console.log(foundCats);
         client.close();
     });
