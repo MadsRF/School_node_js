@@ -15,9 +15,7 @@ exports.up = function(knex) {
         
         // unsigned is to match the datatype of the primary key in users
         table.integer("user_id").unsigned().notNullable();
-        
         table.foreign("user_id").references("users.id")
-
 
         table.dateTime("updated_at").defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
         table.timestamp("created_at").defaultTo(knex.fn.now());
