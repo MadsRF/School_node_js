@@ -1,3 +1,6 @@
+#removes password from getting pushed to github
+mysqlCredentials.js
+
 # ignores all videos in video folder 
 *.mp4
 
