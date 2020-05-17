@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global.css">
+    <title>login</title>
+</head>
+<body>
+    <h1>Login page</h1>
+    
+    <span>If new user go to sign up page to create login</span><br><br>
+
+    <form action="/login" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" placeholder="Enter Username" name="username" required><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" placeholder="Enter Password" name="password" required><br><br>
+        
+        <input type="submit" value="Login">
+    </form><br><br>
+    
+    <form method="get" action="/signup.html">
+        <button type="submit">Go to Sign up</button>
+    </form>
+
+
+</body>
+</html>
