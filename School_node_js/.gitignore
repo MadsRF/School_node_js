@@ -1,3 +1,6 @@
+
+config.json
+
 #removes password from getting pushed to github
 mysqlCredentials.js
 
