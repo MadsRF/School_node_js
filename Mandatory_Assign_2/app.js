@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(express.json());
@@ -73,13 +74,19 @@ app.get("/news", checkAuth, (req, res) => {
     return res.sendFile(__dirname + "/public/news.html");
 });
 
+app.get("/email", checkAuth, (req, res) => {
+    console.log("email");
+    return res.sendFile(__dirname + "/public/email.html");
+});
+
 
 const authRoute = require('./routes/auth.js');
 const usersRoute = require('./routes/users.js');
+const emailRoute = require('./routes/email.js');
 
 app.use(authRoute);
 app.use(usersRoute);
-
+app.use(emailRoute);
 
 const PORT = 3000;
 

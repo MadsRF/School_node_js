@@ -21,6 +21,7 @@ body {
 .dogPics{
     width: 50%;
     height: 50%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 /* topbar navigation */
