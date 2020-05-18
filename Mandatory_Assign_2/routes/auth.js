@@ -23,16 +23,16 @@ router.post('/login', (req, res) => {
         User.query().select('username').where('username', username).then(foundUsername => {
             try {
                 if (foundUsername[0].username == username) {          
-                    console.log(foundUsername[0].username);
+                    //console.log(foundUsername[0].username);
                     
                     User.query().select("password").where('username', foundUsername[0].username).then(foundPassword => {
-                        console.log(foundPassword[0].password);
+                        //console.log(foundPassword[0].password);
                         
                         bcrypt.compare(password, foundPassword[0].password).then(result => {
-                            console.log(result) 
+                            //console.log(result) 
                             if (result == true) {
-                                
-                                return res.redirect("/frontpage");
+                                req.session.user_id = true;
+                                return res.redirect("/home");
                             } else {
                                 return res.status(400).send({ response: "wrong username or password" });
                             };
@@ -83,12 +83,10 @@ router.post('/signup', (req, res) => {
     }
 });
 
-router.get('/logout', (req, res) => {
-    /*
-        delete req.session.user_id;
-        res.redirect('/login');
-    */
-    return res.status(501).send({ response: "Not implemented yet" });
+router.get('/logout', (req, res) => { 
+    console.log("logout", req.body);
+    delete req.session.user_id;
+    res.redirect('/');
 });
 
 module.exports = router;

@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/global.css">
-    <title>signup</title>
+    <title>Signup</title>
 </head>
 <body>
-    <h1>Sign up page</h1>
-
-    <span>Password must be 8 characters long</span><br><br>
-
-    <form action="/signup" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" placeholder="Enter Username" name="username" required><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" placeholder="Enter Password" name="password" required><br><br>
-        
-        <input type="submit" value="create new user" onclick="alert('page will redirect to login')">
-    </form><br><br>
     
-    <form method="get" action="/login.html">
-        <button type="submit">Go to Login</button>
-    </form>
+    <div class="container">
 
-
-
+        <h1>Sign up</h1>
+        <span>Password must be 8 characters long</span><br><br>
+        
+        <form action="/signup" method="post">
+            
+            <label for="username">Username:</label><br>
+            <input type="text" placeholder="Enter Username" name="username" required><br><br>
+            
+            <label for="password">Password:</label><br>
+            <input type="password" placeholder="Enter Password" name="password" required><br><br>
+            
+            <input type="submit" value="create new user" onclick="alert('page will redirect to login')">
+        
+        </form><br>
+        
+        <form method="get" action="/login.html">
+            <button type="submit">Go to Login</button>
+        </form>
+    
+    </div>
 
 </body>
 </html>

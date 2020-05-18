@@ -45,24 +45,33 @@ const knex = Knex(knexfile.development);
 Model.knex(knex);
 
 
-app.get("/", (req, res) => {
-
-    return res.sendFile(__dirname + "/public/login.html");
-});
-
 function checkAuth(req, res, next) {
     if (!req.session.user_id) {
-      res.send('You are not authorized to view this page');
+      res.status(401).sendFile(__dirname + "/public/noAuth.html");
     } else {
       next();
     }
-  }
+};
 
-app.get("/frontpage", checkAuth, (req, res) => {
-    console.log(req.body);
-    return res.sendFile(__dirname + "/public/frontpage.html");
+app.get("/", (req, res) => {
+    console.log("login");
+    return res.sendFile(__dirname + "/public/login.html");
 });
 
+app.get("/home", checkAuth, (req, res) => {
+    console.log("home");
+    return res.sendFile(__dirname + "/public/home.html");
+});
+
+app.get("/contact", checkAuth, (req, res) => {
+    console.log("contact");
+    return res.sendFile(__dirname + "/public/contact.html");
+});
+
+app.get("/news", checkAuth, (req, res) => {
+    console.log("news");
+    return res.sendFile(__dirname + "/public/news.html");
+});
 
 
 const authRoute = require('./routes/auth.js');
