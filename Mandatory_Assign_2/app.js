@@ -51,7 +51,7 @@ function checkAuth(req, res, next) {
       res.status(401).sendFile(__dirname + "/public/noAuth.html");
     } else {
       next();
-    }
+    };
 };
 
 app.get("/", (req, res) => {
@@ -95,4 +95,4 @@ app.listen(PORT, (error) => {
         console.log(error);
     }
     console.log("Server is running on the port", PORT);
-})
+});

@@ -1,51 +1,91 @@
 /* everything in the body tag */
 body {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0%;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #00ccff;
+  margin: 0%;
+  text-transform: capitalize;
+}
+
+/* login/signup h1 text */
+.headtext{
+  text-decoration-line: underline; 
+  text-decoration-color: #00ccff;
+}
+
+/* login/signup logo */
+.doglogo{
+  width: 20%;
 }
 
 /* Login form */
 .container {
-    margin-top: 10%;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3%;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-
+  margin-top: 10%;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3%;
+  padding-top: 4%;
+  background-color: whitesmoke;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, .5);
 }
 
 /* Size for pictures of dogs */
 .dogPics{
-    width: 50%;
-    height: 50%;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  width: 50%;
+  height: 50%;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, .5);
 }
 
 /* topbar navigation */
 .topnav {
-    overflow: hidden;
-    background-color: #A4C3B2;
-    position: sticky; 
-    top: 0;
-    width: 100%; 
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-  }
+  overflow: hidden;
+  background-color: #A4C3B2;
+  position: sticky; 
+  top: 0;
+  width: 100%; 
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
   
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* ------------------ */
+
+/* login/signup buttons */
+.myButton {
+  box-shadow: inset 0px -3px 7px 0px #299fff;
+  background-color: #00ccff;
+  border-radius: 2%;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 4% 15%;
+  width: 100%;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+.myButton:hover {
+  background-color: #0688fa;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+/* ------------------ */
+
   
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* ------------------ */

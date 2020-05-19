@@ -34,15 +34,15 @@ router.post('/login', (req, res) => {
                                 req.session.user_id = true;
                                 return res.redirect("/home");
                             } else {
-                                return res.status(400).send({ response: "wrong username or password" });
+                                return res.status(400).redirect("/home");
                             };
                         });                        
                     });      
                 } else {
-                    return res.status(400).send({ response: "wrong username or password" });
+                    return res.status(400).redirect("/home");
                 }; 
             } catch (error) {
-                return res.status(400).send({ response: "wrong username or password" });
+                return res.status(400).redirect("/home");
             };
         });
     };
@@ -50,7 +50,6 @@ router.post('/login', (req, res) => {
 
 router.post('/signup', (req, res) => {
     const { username, password } = req.body;
-
     console.log("signup", req.body);
 
     if (username && password) {
@@ -72,7 +71,6 @@ router.post('/signup', (req, res) => {
                             });
                         });
                     }
-
                 });
             } catch (error) {
                 return res.status(500).send({ response: "Something went wrong with the DB" });
