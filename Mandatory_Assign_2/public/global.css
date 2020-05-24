@@ -8,6 +8,11 @@ body {
   text-transform: capitalize;
 }
 
+/*  */
+.secureBody{
+  background-color: whitesmoke;
+}
+
 /* login/signup h1 text */
 .headtext{
   text-decoration-line: underline; 
@@ -19,10 +24,22 @@ body {
   width: 20%;
 }
 
+/* login/signup input fields */
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 /* Login form */
 .container {
   margin-top: 10%;
   width: 15%;
+  border-radius: 1%;
   margin-left: auto;
   margin-right: auto;
   padding: 3%;
@@ -30,6 +47,31 @@ body {
   background-color: whitesmoke;
   box-shadow: 4px 8px 16px rgba(0, 0, 0, .5);
 }
+
+/* login/signup buttons */
+.myButton {
+  box-shadow: inset 0px -3px 7px 0px #299fff;
+  background-color: #00ccff;
+  border-radius: 2%;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 4% 15%;
+  width: 100%;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px  #000000;
+}
+.myButton:hover {
+  background-color: #0688fa;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+/* ------------------ */
 
 /* Size for pictures of dogs */
 .dogPics{
@@ -41,7 +83,7 @@ body {
 /* topbar navigation */
 .topnav {
   overflow: hidden;
-  background-color: #A4C3B2;
+  background-color: #00ccff;
   position: sticky; 
   top: 0;
   width: 100%; 
@@ -58,34 +100,11 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #f2f2f2;
   color: black;
 }
 /* ------------------ */
 
-/* login/signup buttons */
-.myButton {
-  box-shadow: inset 0px -3px 7px 0px #299fff;
-  background-color: #00ccff;
-  border-radius: 2%;
-  border: 1px solid #0b0e07;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 4% 15%;
-  width: 100%;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #263666;
-}
-.myButton:hover {
-  background-color: #0688fa;
-}
-.myButton:active {
-  position: relative;
-  top: 1px;
-}
-/* ------------------ */
+
 
   

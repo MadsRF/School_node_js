@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
 
-
+// Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(express.json());
-
 
 // You need to copy the config.template.json file and fill out your own secret
 const session = require('express-session');
@@ -36,7 +35,6 @@ app.use('/login', authLimiter);
 
 
 /* Setup Knex with Objection */
-
 const { Model } = require('objection');
 const Knex = require('knex');
 const knexfile = require('./knexfile.js');

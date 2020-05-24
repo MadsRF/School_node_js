@@ -11,25 +11,23 @@
     <div class="container">
 
         <img class="doglogo" src="./pictures/dogLog1.png" alt="doglogo">
-        
         <h1 class="headtext">Sign up</h1>
-
         <span>Password must be 8 characters long</span><br><br>
         
         <form action="/signup" method="post">
             
             <label for="username">Username:</label><br>
-            <input type="text" placeholder="Enter Username" name="username" required><br><br>
-            
+            <input type="text" placeholder="Username" name="username" required><br><br>
             <label for="password">Password:</label><br>
-            <input type="password" placeholder="Enter Password" name="password" required><br><br>
-            
+            <input type="password" placeholder="Password" name="password" required><br><br>
             <input class="myButton" type="submit" value="Create New User" onclick="alert('page will redirect to login')">
         
         </form><br>
         
         <form method="get" action="/login.html">
+
             <button class="myButton" type="submit">Go to Login</button>
+        
         </form>
     
     </div>
